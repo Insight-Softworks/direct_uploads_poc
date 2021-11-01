@@ -5,7 +5,7 @@ class Api::ReceiptsController < ApplicationController
     if @receipt.save
       render json: @receipt
     else
-      render json: @receipt.errors
+      render json: @receipt.errors.messages
     end
   end
   
