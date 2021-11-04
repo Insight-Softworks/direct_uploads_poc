@@ -1,4 +1,8 @@
 class Api::ReceiptsController < ApplicationController
+  def index
+    render json: Receipt.all
+  end
+
   def create
     @receipt = Receipt.new(receipt_params)
 
