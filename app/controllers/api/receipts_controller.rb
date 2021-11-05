@@ -1,6 +1,6 @@
 class Api::ReceiptsController < ApplicationController
   def index
-    render json: Receipt.all
+    render json: Receipt.order(created_at: :desc)
   end
 
   def create
